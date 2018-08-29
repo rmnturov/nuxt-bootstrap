@@ -2,7 +2,7 @@ import Vue from 'vue'
 import NuxtLoading from './components/nuxt-loading.vue'
 
 import '../assets/scss/styles.scss'
-import '../node_modules/bootstrap-vue/dist/bootstrap-vue.css'
+// import '../node_modules/bootstrap-vue/dist/bootstrap-vue.css'
 
 
 let layouts = {

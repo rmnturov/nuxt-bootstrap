@@ -1,3 +1,5 @@
+@import "node_modules/bootstrap/scss/functions";
+
 /*
 * Orson http://en.orson.io , autreplanete http://www.autreplanete.com/ 
 *  
@@ -30,6 +32,30 @@ $grays: (100: $gray-100, 200: $gray-200, 300: $gray-300, 400: $gray-400, 500: $g
 $theme-colors: (primary: $yellow, secondary: $blue, success: $green, info: $cyan, warning: $yellow, danger: $red, light: $gray-900, dark: $gray-100);
 $colors: (blue: $yellow, indigo: $indigo, purple: $purple, pink: $pink, red: $red, orange: $orange, yellow: $yellow, green: $green, teal: $teal, cyan: $cyan, white: $white, gray: $gray-600,gray-dark: $gray-800);
 $theme-color-interval: 8%;
+
+$primary:       $yellow;
+$secondary:     $blue;
+$success:       $green;
+$info:          $cyan;
+$warning:       $yellow ;
+$danger:        $red;
+$light:         $gray-900;
+$dark:          $gray-100;
+
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark
+  ),
+  $theme-colors
+);
 
 
 // Spacing
@@ -82,7 +108,7 @@ $transition-fade: opacity 0.15s linear;
 $transition-collapse: height 0.35s ease;
 
 
-// Fonts
+// // Fonts
 $font-family-sans-serif: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 $font-family-monospace: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 $font-family-base: $font-family-sans-serif;
@@ -236,7 +262,7 @@ $custom-file-border-radius: $border-radius;
 $custom-file-box-shadow: inset 0 0.2rem 0.4rem rgba($black, 0.05);
 $custom-file-button-color: $custom-file-color;
 $custom-file-button-bg: $gray-200;
-$custom-file-text: (placeholder: (en: 'Choose file...'), button-label: (en: 'Browse'));
+// $custom-file-text: (placeholder: (en: 'Choose file...'), button-label: (en: 'Browse'));
 $form-feedback-valid-color: theme-color('success');
 $form-feedback-invalid-color: theme-color('danger');
 
@@ -318,37 +344,37 @@ $table-inverse-border-color: lighten($gray-900, 7.5%);
 $table-inverse-color: $body-bg;
 
 
-// Z Index
-$zindex-dropdown: 1000;
-$zindex-sticky: 1020;
-$zindex-fixed: 1030;
-$zindex-modal-backdrop: 1040;
-$zindex-modal: 1050;
-$zindex-popover: 1060;
-$zindex-tooltip: 1070;
+// // Z Index
+// $zindex-dropdown: 1000;
+// $zindex-sticky: 1020;
+// $zindex-fixed: 1030;
+// $zindex-modal-backdrop: 1040;
+// $zindex-modal: 1050;
+// $zindex-popover: 1060;
+// $zindex-tooltip: 1070;
 
 
-// Pagination
-$pagination-padding-y: 0.5rem;
-$pagination-padding-x: 1rem;
-$pagination-padding-y-sm: 0.25rem;
-$pagination-padding-x-sm: 0.5rem;
-$pagination-padding-y-lg: 0.75rem;
-$pagination-padding-x-lg: 2rem;
-$pagination-line-height: 1.25;
-$pagination-color: $gray-900;
-$pagination-bg: $gray-300;
-$pagination-border-width: $border-width;
-$pagination-border-color: $gray-400;
-$pagination-hover-color: $link-hover-color;
-$pagination-hover-bg: $gray-200;
-$pagination-hover-border-color: #ddd;
-$pagination-active-color: $white;
-$pagination-active-bg: theme-color('primary');
-$pagination-active-border-color: theme-color('primary');
-$pagination-disabled-color: $gray-600;
-$pagination-disabled-bg: $white;
-$pagination-disabled-border-color: #ddd;
+// // Pagination
+// $pagination-padding-y: 0.5rem;
+// $pagination-padding-x: 1rem;
+// $pagination-padding-y-sm: 0.25rem;
+// $pagination-padding-x-sm: 0.5rem;
+// $pagination-padding-y-lg: 0.75rem;
+// $pagination-padding-x-lg: 2rem;
+// $pagination-line-height: 1.25;
+// $pagination-color: $gray-900;
+// $pagination-bg: $gray-300;
+// $pagination-border-width: $border-width;
+// $pagination-border-color: $gray-400;
+// $pagination-hover-color: $link-hover-color;
+// $pagination-hover-bg: $gray-200;
+// $pagination-hover-border-color: #ddd;
+// $pagination-active-color: $white;
+// $pagination-active-bg: theme-color('primary');
+// $pagination-active-border-color: theme-color('primary');
+// $pagination-disabled-color: $gray-600;
+// $pagination-disabled-bg: $white;
+// $pagination-disabled-border-color: #ddd;
 
 
 // Jumbotron
@@ -448,50 +474,50 @@ $alert-link-font-weight: $font-weight-bold;
 $alert-border-width: $border-width;
 
 
-// Progress bars
-$progress-height: 1rem;
-$progress-font-size: 0.75rem;
-$progress-bg: $gray-200;
-$progress-border-radius: $border-radius;
-$progress-box-shadow: inset 0 0.1rem 0.1rem rgba($black, 0.1);
-$progress-bar-color: $white;
-$progress-bar-bg: theme-color('primary');
-$progress-bar-animation-timing: 1s linear infinite;
-$progress-bar-transition: width 0.6s ease;
+// // Progress bars
+// $progress-height: 1rem;
+// $progress-font-size: 0.75rem;
+// $progress-bg: $gray-200;
+// $progress-border-radius: $border-radius;
+// $progress-box-shadow: inset 0 0.1rem 0.1rem rgba($black, 0.1);
+// $progress-bar-color: $white;
+// $progress-bar-bg: theme-color('primary');
+// $progress-bar-animation-timing: 1s linear infinite;
+// $progress-bar-transition: width 0.6s ease;
 
 
-// List group
-$list-group-bg: $gray-200;
-$list-group-border-color: rgba($black, 0.2);
-$list-group-border-width: $border-width;
-$list-group-border-radius: $border-radius;
-$list-group-item-padding-y: 0.75rem;
-$list-group-item-padding-x: 1.25rem;
-$list-group-hover-bg: $gray-300;
-$list-group-active-color: $component-active-color;
-$list-group-active-bg: $gray-400;
-$list-group-active-border-color: $list-group-active-bg;
-$list-group-disabled-color: $gray-600;
-$list-group-disabled-bg: $list-group-bg;
-$list-group-action-color: $gray-700;
-$list-group-action-hover-color: $list-group-action-color;
-$list-group-action-active-color: $body-color;
-$list-group-action-active-bg: $gray-200;
+// // List group
+// $list-group-bg: $gray-200;
+// $list-group-border-color: rgba($black, 0.2);
+// $list-group-border-width: $border-width;
+// $list-group-border-radius: $border-radius;
+// $list-group-item-padding-y: 0.75rem;
+// $list-group-item-padding-x: 1.25rem;
+// $list-group-hover-bg: $gray-300;
+// $list-group-active-color: $component-active-color;
+// $list-group-active-bg: $gray-400;
+// $list-group-active-border-color: $list-group-active-bg;
+// $list-group-disabled-color: $gray-600;
+// $list-group-disabled-bg: $list-group-bg;
+// $list-group-action-color: $gray-700;
+// $list-group-action-hover-color: $list-group-action-color;
+// $list-group-action-active-color: $body-color;
+// $list-group-action-active-bg: $gray-200;
 
 
-// Image thumbnails
-$thumbnail-padding: 0.25rem;
-$thumbnail-bg: $body-bg;
-$thumbnail-border-width: $border-width;
-$thumbnail-border-color: #ddd;
-$thumbnail-border-radius: $border-radius;
-$thumbnail-box-shadow: 0 1px 2px rgba($black, 0.075);
-$thumbnail-transition: all 0.2s ease-in-out;
+// // Image thumbnails
+// $thumbnail-padding: 0.25rem;
+// $thumbnail-bg: $body-bg;
+// $thumbnail-border-width: $border-width;
+// $thumbnail-border-color: #ddd;
+// $thumbnail-border-radius: $border-radius;
+// $thumbnail-box-shadow: 0 1px 2px rgba($black, 0.075);
+// $thumbnail-transition: all 0.2s ease-in-out;
 
 
-// Figures
-$figure-caption-font-size: 90%;
-$figure-caption-color: $gray-600;
+// // Figures
+// $figure-caption-font-size: 90%;
+// $figure-caption-color: $gray-600;
 
 
 // Breadcrumbs
@@ -504,44 +530,44 @@ $breadcrumb-active-color: $gray-900;
 $breadcrumb-divider: '/';
 
 
-// Carousel
-$carousel-control-color: $white;
-$carousel-control-width: 15%;
-$carousel-control-opacity: 0.5;
-$carousel-indicator-width: 30px;
-$carousel-indicator-height: 3px;
-$carousel-indicator-spacer: 3px;
-$carousel-indicator-active-bg: $white;
-$carousel-caption-width: 70%;
-$carousel-caption-color: $white;
-$carousel-control-icon-width: 20px;
-$carousel-transition: transform 0.6s ease;
+// // Carousel
+// $carousel-control-color: $white;
+// $carousel-control-width: 15%;
+// $carousel-control-opacity: 0.5;
+// $carousel-indicator-width: 30px;
+// $carousel-indicator-height: 3px;
+// $carousel-indicator-spacer: 3px;
+// $carousel-indicator-active-bg: $white;
+// $carousel-caption-width: 70%;
+// $carousel-caption-color: $white;
+// $carousel-control-icon-width: 20px;
+// $carousel-transition: transform 0.6s ease;
 
 
-// Close
-$close-font-size: $font-size-base * 1.5;
-$close-font-weight: $font-weight-bold;
-$close-color: $black;
-$close-text-shadow: 0 1px 0 $white;
+// // Close
+// $close-font-size: $font-size-base * 1.5;
+// $close-font-weight: $font-weight-bold;
+// $close-color: $black;
+// $close-text-shadow: 0 1px 0 $white;
 
 
-// Code
-$code-font-size: 90%;
-$code-padding-y: 0.2rem;
-$code-padding-x: 0.4rem;
-$code-color: #bd4147;
-$code-bg: $gray-300;
-$kbd-color: $white;
-$kbd-bg: $gray-300;
-$pre-color: $gray-900;
-$pre-scrollable-max-height: 340px;
+// // Code
+// $code-font-size: 90%;
+// $code-padding-y: 0.2rem;
+// $code-padding-x: 0.4rem;
+// $code-color: #bd4147;
+// $code-bg: $gray-300;
+// $kbd-color: $white;
+// $kbd-bg: $gray-300;
+// $pre-color: $gray-900;
+// $pre-scrollable-max-height: 340px;
 
 
-// Options
-$enable-rounded: true;
-$enable-shadows: false;
-$enable-gradients: false;
-$enable-transitions: true;
-$enable-hover-media-query: false;
-$enable-grid-classes: true;
-$enable-print-styles: true;
+// // Options
+// $enable-rounded: true;
+// $enable-shadows: false;
+// $enable-gradients: false;
+// $enable-transitions: true;
+// $enable-hover-media-query: false;
+// $enable-grid-classes: true;
+// $enable-print-styles: true;
