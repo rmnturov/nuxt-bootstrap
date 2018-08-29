@@ -29,12 +29,13 @@ $gray-800: #95B6BF;
 $gray-900: #BAD2D6;
 $black: #000;
 $grays: (100: $gray-100, 200: $gray-200, 300: $gray-300, 400: $gray-400, 500: $gray-500, 600: $gray-600, 700: $gray-700, 800: $gray-800, 900: $gray-900);
-$theme-colors: (primary: $yellow, secondary: $blue, success: $green, info: $cyan, warning: $yellow, danger: $red, light: $gray-900, dark: $gray-100);
+$theme-colors: (primary: $yellow, secondary: $gray-400, success: $green, info: $cyan, warning: $yellow, danger: $red, light: $gray-900, dark: $gray-100);
 $colors: (blue: $yellow, indigo: $indigo, purple: $purple, pink: $pink, red: $red, orange: $orange, yellow: $yellow, green: $green, teal: $teal, cyan: $cyan, white: $white, gray: $gray-600,gray-dark: $gray-800);
 $theme-color-interval: 8%;
 
 $primary:       $yellow;
-$secondary:     $blue;
+// $secondary:     $blue;
+$secondary:     $gray-400;
 $success:       $green;
 $info:          $cyan;
 $warning:       $yellow ;
@@ -57,6 +58,18 @@ $theme-colors: map-merge(
   $theme-colors
 );
 
+
+// Customize the light and dark text colors for use in our YIQ color contrast function.
+$yiq-text-dark:   $white;
+$yiq-text-light:  $gray-900;
+
+
+// Focus
+*:focus {
+  // outline: -webkit-focus-ring-color auto 5px;
+  outline: lighten(theme-color('primary'), 10%) auto 5px;
+  outline-offset: 2px;
+}
 
 // Spacing
 $spacer: 1rem;
@@ -188,10 +201,11 @@ $input-border-radius: $border-radius;
 $input-border-radius-lg: $border-radius-lg;
 $input-border-radius-sm: $border-radius-sm;
 $input-focus-bg: $input-bg;
-$input-focus-border-color: lighten(theme-color('primary'), 25%);
+$input-focus-border-color: theme-color('primary');
 $input-focus-box-shadow: $input-box-shadow, $btn-focus-box-shadow;
+// $input-focus-box-shadow: $input-box-shadow, $btn-focus-box-shadow;
 $input-focus-color: $input-color;
-$input-placeholder-color: $gray-600;
+$input-placeholder-color: $gray-700;
 $input-height-border: $input-btn-border-width * 2;
 $input-height-inner: ($font-size-base * $input-btn-line-height) + ($input-btn-padding-y * 2);
 $input-height: calc(#{$input-height-inner} + #{$input-height-border});
